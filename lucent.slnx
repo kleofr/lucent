@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="lucent/lucent.vcxproj" Id="4264f885-8258-48dc-815c-ae36aa21601b" />
+  <Project Path="Sandbox/Sandbox.vcxproj" Id="e024599c-03be-4c2a-8eef-54130f697e7a" />
+</Solution>
