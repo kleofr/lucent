@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "k:\\projects\\game engine\\lucent\\lucent\\src\\lucent\\entrypoint.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "k:\\projects\\game engine\\lucent\\lucent\\src\\lucent\\application.h",
+            "k:\\projects\\game engine\\lucent\\lucent\\src\\lucent\\core.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
