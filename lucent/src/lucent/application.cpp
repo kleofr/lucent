@@ -1,7 +1,9 @@
 #include "application.h"
 
+// Namespace lucent
 namespace lucent
 {
+	// Application class implementation
 	application::application()
 	{
 	
@@ -10,6 +12,8 @@ namespace lucent
 	{
 
 	}
+
+	// Run the application
 	void application::run()
 	{
 		while (true);

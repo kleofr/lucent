@@ -14,6 +14,8 @@ int main(int argc, char** argv)
 {
 	// Initialize loggers
 	lucent::log::Init();
+
+	// Test loggers
 	LCNT_CORE_INFO("Core logger working");
 	LCNT_CLIENT_ERROR("Client logger working");
 

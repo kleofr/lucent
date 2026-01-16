@@ -2,9 +2,9 @@
 
 #include <stdio.h>
 
-// Application Layer
+// Core lucent includes
 #include "lucent/application.h"
 #include "lucent/log.h"
 
-// Entry point
+// Platform detection
 #include "lucent/entrypoint.h"

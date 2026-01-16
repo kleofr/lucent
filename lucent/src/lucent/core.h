@@ -16,3 +16,5 @@
 	#error Lucent Supports only Windows!
 
 #endif // LCNT_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

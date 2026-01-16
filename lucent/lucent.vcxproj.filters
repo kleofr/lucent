@@ -19,6 +19,10 @@
     <ClInclude Include="src\lucent\log.h">
       <Filter>lucent</Filter>
     </ClInclude>
+    <ClInclude Include="src\lucent\Events\Event.h" />
+    <ClInclude Include="src\lucent\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\lucent\Events\KeyEvent.h" />
+    <ClInclude Include="src\lucent\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\lucent\application.cpp">
