@@ -157,6 +157,7 @@
     <ClInclude Include="src\lucent\Events\KeyEvent.h" />
     <ClInclude Include="src\lucent\Events\ApplicationEvent.h" />
     <ClInclude Include="src\lucent\Events\MouseEvent.h" />
+    <ClInclude Include="src\lucent\Events\WindowEvent.h" />
     <ClInclude Include="src\lucent\log.h" />
   </ItemGroup>
   <ItemGroup>

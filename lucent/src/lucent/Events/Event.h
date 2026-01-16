@@ -10,9 +10,10 @@ namespace lucent {
 	// Event types
 	enum class eventType
 	{
+		// Add if needed in future windowFocus, windowLostFocus, windowMoved
+
 		none = 0,
-		windowClose, windowResize, windowFocus, windowLostFocus, windowMoved,
-		appTick, appUpdate, appRender,
+		windowClose, windowResize, appTick, appUpdate, appRender,
 		keyPressed, keyReleased, keyTyped,
 		mouseButtonPressed, mouseButtonReleased, mouseMoved, mouseScrolled
 	};
@@ -31,14 +32,14 @@ namespace lucent {
 
 
 	// Macros for event classes
-#define EVENT_CLASS_TYPE(type) static eventType getStaticType() { return eventType::type; }\
-								virtual eventType getEventType() const override { return getStaticType(); }\
-								virtual const char* getName() const override { return #type; }
+	#define EVENT_CLASS_TYPE(type) static eventType getStaticType() { return eventType::type; }\
+									virtual eventType getEventType() const override { return getStaticType(); }\
+									virtual const char* getName() const override { return #type; }
 
-#define EVENT_CLASS_CATEGORY(category) virtual int getCategoryFlags() const override { return category; }
+	#define EVENT_CLASS_CATEGORY(category) virtual int getCategoryFlags() const override { return category; }
 
 
-// Base event class
+	// Base event class
 	class LCNT_API Event
 	{
 		friend class eventDispatcher;
@@ -80,6 +81,6 @@ namespace lucent {
 		}
 	private:
 		Event& m_Event;
-	}
+	};
 
-}; // namespace lucent
+} // namespace lucent

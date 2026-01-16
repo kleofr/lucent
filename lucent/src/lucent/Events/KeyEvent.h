@@ -7,27 +7,27 @@ namespace lucent {
 	class keyEvent : public Event
 	{
 		public:
-			inline int getKeyCode() const { return keyCode; }
+			inline int getKeyCode() const { return m_keyCode; }
 			EVENT_CLASS_CATEGORY(eventCategoryKeyboard | eventCategoryInput)
 		protected:
 			keyEvent(int keycode)
-				: keyCode(keycode) {}
-			int keyCode;
+				: m_keyCode(keycode) {}
+			int m_keyCode;
 	};
 
 	class keyPressedEvent : public keyEvent
 	{
 		public:
 			keyPressedEvent(int keycode, int repeatCount)
-				: keyEvent(keycode), repeatCount(repeatCount) {}
-			inline int getRepeatCount() const { return repeatCount; }
+				: keyEvent(keycode), m_repeatCount(repeatCount) {}
+			inline int getRepeatCount() const { return m_repeatCount; }
 			std::string toString() const override
 			{
-				return std::string(getName()) + ": " + std::to_string(keyCode) + " (" + std::to_string(repeatCount) + " repeats)";
+				return std::string(getName()) + ": " + std::to_string(m_keyCode) + " (" + std::to_string(m_repeatCount) + " repeats)";
 			}
 			EVENT_CLASS_TYPE(keyPressed)
 		private:
-			int repeatCount;
+			int m_repeatCount;
 	};
 
 	class keyReleasedEvent : public keyEvent
@@ -37,9 +37,21 @@ namespace lucent {
 				: keyEvent(keycode) {}
 			std::string toString() const override
 			{
-				return std::string(getName()) + ": " +  std::to_string(keyCode);
+				return std::string(getName()) + ": " +  std::to_string(m_keyCode);
 			}
 			EVENT_CLASS_TYPE(keyReleased)
+	};
+
+	class keyTypedEvent : public keyEvent
+	{
+	public:
+		keyTypedEvent(int keycode)
+			: keyEvent(keycode) {}
+
+		std::string toString() const override 
+		{
+			return std::string(getName()) + ": " + std::to_string(m_keyCode);
+		}
 	};
 
 }
